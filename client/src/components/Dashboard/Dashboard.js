@@ -79,7 +79,7 @@ const Dashboard = () => {
       }
     };
     load();
-  }, []);
+  }, [now]);
 
   const barData = {
     labels: monthlyData.map(m => m.monthName),
