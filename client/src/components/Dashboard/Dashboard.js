@@ -58,8 +58,8 @@ const Dashboard = () => {
   const currency = user?.currency || 'USD';
   const fmt = (n) => new Intl.NumberFormat('en-US', { style: 'currency', currency }).format(n);
 
+  const now = new Date();
   useEffect(() => {
-    const now = new Date();
 
     const load = async () => {
       try {
