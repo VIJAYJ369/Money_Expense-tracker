@@ -1,0 +1,126 @@
+.reports { display: flex; flex-direction: column; gap: 24px; }
+
+.reports-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.reports-title { font-size: 26px; font-weight: 700; margin-bottom: 4px; }
+
+.reports-controls { display: flex; gap: 10px; }
+.reports-controls .form-select { width: auto; }
+
+.annual-strip {
+  display: flex;
+  align-items: center;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px 28px;
+  gap: 0;
+}
+
+.annual-item { flex: 1; text-align: center; }
+.annual-label { font-size: 12px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 6px; }
+.annual-value { font-family: var(--font-display); font-size: 22px; font-weight: 700; }
+.annual-divider { width: 1px; height: 40px; background: var(--border); margin: 0 4px; }
+
+.report-row {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 24px;
+}
+
+.report-card { display: flex; flex-direction: column; gap: 20px; }
+
+.report-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.chart-title { font-size: 16px; font-weight: 600; }
+
+.toggle-type {
+  display: flex;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 3px;
+}
+
+.toggle-btn {
+  padding: 5px 14px;
+  border-radius: 6px;
+  background: transparent;
+  border: none;
+  color: var(--text-secondary);
+  font-size: 13px;
+  cursor: pointer;
+  transition: var(--transition);
+  font-family: var(--font-main);
+}
+
+.toggle-active { background: var(--bg-card-hover); color: var(--text-primary); }
+
+/* Category breakdown */
+.cat-breakdown-list { display: flex; flex-direction: column; gap: 10px; }
+
+.cat-breakdown-item {
+  display: grid;
+  grid-template-columns: 10px 1fr auto 60px auto;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+}
+
+.cat-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+.cat-name { color: var(--text-secondary); }
+.cat-total { font-weight: 600; font-size: 13px; text-align: right; white-space: nowrap; }
+
+.cat-bar-wrap { height: 4px; background: var(--bg-secondary); border-radius: 2px; overflow: hidden; }
+.cat-bar { height: 100%; border-radius: 2px; transition: width 0.6s ease; }
+.cat-pct { font-size: 12px; color: var(--text-muted); text-align: right; }
+
+/* Top expenses */
+.top-expense-list { display: flex; flex-direction: column; gap: 16px; }
+
+.top-expense-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.top-rank {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-muted);
+  width: 30px;
+  text-align: center;
+}
+
+.top-info { flex: 1; min-width: 0; }
+.top-category { font-size: 14px; font-weight: 600; }
+.top-desc { font-size: 12px; color: var(--text-secondary); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.top-date { font-size: 11px; color: var(--text-muted); }
+.top-amount { font-family: var(--font-display); font-size: 15px; font-weight: 700; }
+
+.empty-chart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80px;
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+@media (max-width: 900px) {
+  .report-row { grid-template-columns: 1fr; }
+  .annual-strip { flex-wrap: wrap; gap: 12px; }
+}
