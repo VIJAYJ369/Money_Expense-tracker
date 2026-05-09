@@ -98,8 +98,6 @@ const Dashboard = () => {
   const fmt = (n) =>
     new Intl.NumberFormat("en-US", { style: "currency", currency }).format(n);
 
-  const currentDate = new Date();
-
   useEffect(() => {
     const now = new Date();
     const hour = now.getHours();
